@@ -55,5 +55,4 @@ def add_flight_line(airport_entry_fee):
                 else:
                     new_airports_dict = {"origin_airport":code1, "destination_airport":code2}
                     return new_airports_dict
-                    
 
