@@ -12,8 +12,9 @@ def num_budget():
     return num
 
 def is_admin_verification(username,password,file_content):
-    for line in file_content:
-        if username == line[0] and password == line[1]:
+    for i, line in enumerate(file_content):
+        if i != 0:
+          if username == line[0] and password == line[1]:
             return True
     return False
 

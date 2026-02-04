@@ -14,7 +14,7 @@ def run_menu():
         print("Redirecting to Admin Portal")
         user_name = input("Enter your user name: ")
         password = input("Enter a password:")
-        is_admin_verification(user_name , password , list_of_users) 
+        print(is_admin_verification(user_name , password , list_of_users)) 
         
     elif choice == "2":
         print("Where would you like to fly this time?")
