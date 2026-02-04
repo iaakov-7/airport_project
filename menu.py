@@ -20,4 +20,3 @@ def run_menu():
     else:
         print("please choose 1 or 2 ")
    
-run_menu()
