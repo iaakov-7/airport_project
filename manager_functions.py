@@ -54,6 +54,11 @@ def add_flight_line():
                     print("Not enough money in the budget")
                     break
                 else:
+                    # "עדכון היתרה"
+                    Current_balance -= final_price
+                    with open("budget.txt", "w") as f:
+                        f.write(str(Current_balance))
+                    # "החזרת קודי שדות התעופה כמילון"   
                     new_airports_dict = {"origin_airport":code1, "destination_airport":code2}
                     return new_airports_dict
 
@@ -64,7 +69,6 @@ def add_new_line_to_json(new_line):
     with open("available_lines.json","w") as f:
         json.dump(data,f)  
       
-
 
 
 
