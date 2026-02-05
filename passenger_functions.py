@@ -1,4 +1,7 @@
 import manager_functions
+import random
+import string
+
 # "מקבלת כפרטמר את הסכום של עלות הרכטיס"
 def balance_update(final_price):
     Current_balance = int(manager_functions.num_budget())
@@ -33,4 +36,9 @@ def Origin_and_destination_verification():
                 # "חזרה ללולאה"
                 continue
 
-    
+# "הדפסת כרטיס לנוסע"
+def Card_printing(final_price,selected_destinations):
+    print("destination country",selected_destinations[0])
+    print("origin country",selected_destinations[1])
+    print("final price",final_price)
+    print("ID: ", "".join(random.choices(string.ascii_uppercase + string.digits, k=8)))
