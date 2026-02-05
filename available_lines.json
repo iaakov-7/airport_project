@@ -1,1 +1,8 @@
-{"available_lines": [{"origin_airport": "None", "destination_airport": "None"}]}
+{
+    "available_lines": [
+        {
+            "origin_airport": "None",
+            "destination_airport": "None"
+        }
+    ]
+}
