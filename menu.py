@@ -19,6 +19,7 @@ def run_menu():
             choice = input("Enter your choice: 1 = Add Flight :")
             if choice == "1":
                 Purchasing_ability_test = manager_functions.add_flight_line()
+                manager_functions.add_new_line_to_json(Purchasing_ability_test)
 
             
             
