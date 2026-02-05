@@ -21,10 +21,6 @@ def run_menu():
                 Purchasing_ability_test = manager_functions.add_flight_line()
                 manager_functions.add_new_line_to_json(Purchasing_ability_test)
 
-            
-            
-
-
         
     elif choice == "2":
         print("Where would you like to fly this time?")
