@@ -6,7 +6,7 @@ import string
 
 # "מקבלת כפרטמר את הסכום של עלות הרכטיס"
 def balance_update(final_price):
-    Current_balance = int(manager_functions.num_budget())
+    Current_balance = float(manager_functions.num_budget())
     # "חישוב היתרה החדשה"
     Current_balance += final_price
     # "עדכון היתרה"
@@ -18,14 +18,14 @@ def balance_update(final_price):
 def Origin_and_destination_verification(List_of_available_destinations): 
     while True:
         # "בקשת שני קודים של מוצא ויעד"
-        destination_country = input("Enter origin country: ")
-        origin_country = input("Enter destination country: ")
+        origin_country = input("Enter origin country: ")
+        destination_country = input("Enter destination country: ")
         # "בדיקה שהקודים אינם זהים"
         if destination_country == origin_country:
             print("Destination country cannot be the same as origin country") 
         elif destination_country != origin_country:
             for line in List_of_available_destinations:
-                if line[0] == destination_country and line[1] == origin_country:
+                if line[0] == origin_country and line[1] == destination_country:
                     # "הכנסת הקודים לרשימה"
                     selected_destinations = [line[0], line[1]]
                     # "החזרת הרשימה"
@@ -38,8 +38,8 @@ def Origin_and_destination_verification(List_of_available_destinations):
 
 # "הדפסת כרטיס לנוסע"
 def Card_printing(final_price,selected_destinations):
-    print("destination country",selected_destinations[0])
-    print("origin country",selected_destinations[1])
+    print("origin country",selected_destinations[0])
+    print("destination country",selected_destinations[1])
     print("final price",final_price)
     print("ID: ", "".join(random.choices(string.ascii_uppercase + string.digits, k=8)))
 
