@@ -1,7 +1,7 @@
 import menu
 from files_management import check_file
 def Main_operation():
-    files = check_file("airport_entry_fee.csv" , "budget.txt" , "available_lines.json",  "credentials.csv")
+    files = check_file("airport_entry_fee.csv" , "budget.txt" , "available_lines.json",  "credentials.csv" ,"continents_pricing.csv")
     if files == False:
      return
     menu.run_menu()  
