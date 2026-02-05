@@ -1,5 +1,4 @@
 import manager_functions
-List_of_airports = "airport_entry_fee.csv"
 from  manager_functions import Return_file_credentials_in_list , is_admin_verification
 def run_menu():
     print(" ")
@@ -19,7 +18,7 @@ def run_menu():
         if is_admin_verification(user_name , password , list_of_users):
             choice = input("Enter your choice: 1 = Add Flight :")
             if choice == "1":
-                Purchasing_ability_test = manager_functions.add_flight_line(List_of_airports)
+                Purchasing_ability_test = manager_functions.add_flight_line()
 
             
             
