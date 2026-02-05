@@ -1,3 +1,4 @@
+
 import json
 
 def Show_Available():
@@ -18,3 +19,17 @@ def Show_Available():
             print(f"[{i}] {origin} -> {destination}")
             
         return routes_list
+
+def wants_ticket():
+    while True:
+        response = input("Do you want a flight ticket? (yes/no): ").strip().lower()
+        if response == "yes":
+            return True
+        elif response == "no":
+            return False
+        else:
+            print("Please answer with 'yes' or 'no'.")
+
+def Final_ticket_price(result1, result2):
+    return result1 + result2
+
