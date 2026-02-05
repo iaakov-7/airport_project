@@ -1,3 +1,4 @@
+import manager_functions
 from  manager_functions import Return_file_credentials_in_list , is_admin_verification
 def run_menu():
     print(" ")
@@ -14,7 +15,15 @@ def run_menu():
         print("Redirecting to Admin Portal")
         user_name = input("Enter your user name: ")
         password = input("Enter a password:")
-        is_admin_verification(user_name , password , list_of_users)
+        if is_admin_verification(user_name , password , list_of_users):
+            choice = input("Enter your choice: 1 = Add Flight :")
+            if choice == "1":
+                Purchasing_ability_test = manager_functions.add_flight_line()
+
+            
+            
+
+
         
     elif choice == "2":
         print("Where would you like to fly this time?")
