@@ -21,9 +21,9 @@ def Origin_and_destination_verification():
                 if line[0] == destination_country and line[1] == origin_country:
                     selected_destinations = [line[0], line[1]]
                     return selected_destinations
+                    break
             else:
                 print("Destination country or origin country are not available")
-                return None
- 
+                continue
 
     
