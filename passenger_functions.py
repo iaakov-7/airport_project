@@ -15,17 +15,15 @@ def balance_update(final_price):
 
 
 
-def Origin_and_destination_verification():
+def Origin_and_destination_verification(List_of_available_destinations): 
     while True:
         # "בקשת שני קודים של מוצא ויעד"
-        destination_country = input("Enter destination country: ")
-        origin_country = input("Enter origin country: ")
+        destination_country = input("Enter origin country: ")
+        origin_country = input("Enter destination country: ")
         # "בדיקה שהקודים אינם זהים"
         if destination_country == origin_country:
-            print("Destination country cannot be the same as origin country")
+            print("Destination country cannot be the same as origin country") 
         elif destination_country != origin_country:
-            List_of_available_destinations = Show_Available()
-            # " בדיקה הקודים קיימים ברשימת הקודים הזמינים"
             for line in List_of_available_destinations:
                 if line[0] == destination_country and line[1] == origin_country:
                     # "הכנסת הקודים לרשימה"

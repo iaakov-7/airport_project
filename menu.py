@@ -1,5 +1,7 @@
 import manager_functions
 from  manager_functions import Return_file_credentials_in_list , is_admin_verification
+import manager_functions
+import passenger_functions
 def run_menu():
     print(" ")
     print("--- Welcome to the Flight Management System ---")
@@ -23,8 +25,18 @@ def run_menu():
 
         
     elif choice == "2":
-        print("Where would you like to fly this time?")
-        #מחכה לפונקצית נוסע
+        Show_Available = passenger_functions.Show_Available()
+        codes = passenger_functions.Origin_and_destination_verification(Show_Available)
+        base_ticket_price = passenger_functions.base_ticket_price(codes[0],codes[1])
+        continents_ticket_price = passenger_functions.continents_ticket_priec(codes[0],codes[1])
+        final_price = passenger_functions.Final_ticket_price(base_ticket_price,continents_ticket_price)
+        if passenger_functions.wants_ticket():
+            passenger_functions.balance_update(final_price)
+            passenger_functions.Card_printing(final_price,codes)
+        else:
+            print("by by!")
+            return
+
     else:
         print("please choose 1 or 2 ")
    
