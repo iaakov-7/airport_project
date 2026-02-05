@@ -7,3 +7,6 @@ def wants_ticket():
             return False
         else:
             print("Please answer with 'yes' or 'no'.")
+
+def Final_ticket_price(result1, result2):
+    return result1 + result2
