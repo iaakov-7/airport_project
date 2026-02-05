@@ -1,4 +1,5 @@
 import csv
+import json
 
 def Return_file_credentials_in_list(name_file):
     with open(name_file, 'r',encoding = "utf-8") as file:
@@ -17,6 +18,7 @@ def is_admin_verification(username,password,file_content):
           if username == line[0] and password == line[1]:
             return True
     return False
+
 
 def add_flight_line():
     while True:
@@ -54,4 +56,15 @@ def add_flight_line():
                 else:
                     new_airports_dict = {"origin_airport":code1, "destination_airport":code2}
                     return new_airports_dict
+
+def add_new_line_to_json(new_line):
+    with open("available_lines.json","r") as f:
+       data =  json.load(f) 
+       data["available_lines"].append(new_line)
+    with open("available_lines.json","w") as f:
+        json.dump(data,f)  
+      
+
+
+
 
